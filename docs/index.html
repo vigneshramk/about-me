@@ -1,62 +1,365 @@
----
-layout: default
-title: Blog
----
-<div class="well">
-    <div class="list-group">
-      {% for post in paginator.posts %}
-      <div class="list-group-item">
-        <div class="row-action-primary">
-          <i class="fa fa-sticky-note"></i>
-        </div>
-        <div class="row-content">
-          <div class="least-content">{{ post.date | date_to_string }}</div>
-          <h4 class="list-group-item-heading"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h4>
+﻿<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Vigneshram | Researcher| Robotics Enthusiast </title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
 
-          <p class="list-group-item-text">{{ post.content | strip_html | truncatewords: 20 }}</p>
-        </div>
-      </div>
-      <div class="list-group-separator"></div>
-      {% endfor %}
-    </div>
-   
+		<link rel="stylesheet" href="assets/css/custom.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
 
-    <!-- Pagination links -->
-    {% if paginator.total_pages > 1 %}
-    <ul class="pager">
-      {% if paginator.previous_page %}
-        <li class="previous">
-          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo;</a>
-        </li>
-      {% else %}
-        <li class="previous disabled"><span aria-hidden="true">&laquo;</span></li>
-      {% endif %}
+		<!-- Wrapper -->
+			<div id="wrapper">
 
-      <li><a href="/">First</a></li>
+				<!-- Header -->
+					<header id="header" class="alt">
+						<span class="logo"><img src="images/logo.svg" alt="" /></span>
+						<h1>Vigneshram Krishnamoorthy</h1>
+						<p>Researcher - Robotics Enthusiast - Tutor</p>
+					</header>
 
-      {% for page in (1..paginator.total_pages) %}
-        {% if page == paginator.page %}
-          <li class="active">
-             <a>{{ page }}<span class="sr-only">(current)</span></a>
-          </li>
-        {% elsif page == 1 %}
-          <li><a href="/">{{ page }}</a></li>
-        {% else %}
-          <li>
-            <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-          </li>
-        {% endif %}
-      {% endfor %}
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li> <a href="#about">About me</a></li>
+							<li><a href="#research">Research & Projects</a></li>
+							<li><a href="#publications">Publications</a></li>
+							<li><a href="#workshop">Workshops</a></li>
+							<li><a href="#accomplishments">Notable Accomplishments</a></li>
+							<li><a href="#cv">CV</a></li>
+						</ul>
+					</nav>
 
-      <li><a href="/page{{ paginator.total_pages }}/">Last</a></li>
+				<!-- Main -->
+					<div id="main">
 
-      {% if paginator.next_page %}
-        <li class="next">
-          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">&raquo;</a>
-        </li>
-      {% else %}
-        <li class="next disabled"><span>&raquo;</span></li>
-      {% endif %}
-    </ul>
-    {% endif %}
-</div><!-- end #home -->
+						<!-- Introduction -->
+							<section id="about" class="main">
+								<div class="spotlight row">
+									<div class="content col-md-6">
+										<header class="major">
+											<h2>Hi there!</h2>
+										</header>
+										<p>I am currently a final year Electronics and Communication Engineering student in National Institute Of Technology,Tiruchirappalli . I have actively pursued my interest in Robotics through various projects in related fields. Currently the President of Spider, the Research and Development club of NIT Trichy, I have been a part of various project collaborations with the industry and with premier institutes like IITs. Participating and winning in technical competitions happening around the country helped me hone my skills. I always had great interest in conducting tech-talks and workshops for students and I have tutored 1000+ students through numerous workshops and talks throughout the course of my undergraduate study.
+										</p>
+									</div>
+									<div class="col-md-3">
+									<span class="image"><img src="images/kvr.png" alt="" /></span>
+									</div>
+									</div>
+									<div class="row aoi">
+										<h2 class="major">Areas Of Interest</h2>
+										 <div class="col-md-12">
+						             
+						                    <div class="col-md-3">
+						                        <img src="images/cps.png" height="120" width="20"">
+						                        <p>Cyber-physical systems</p>
+						                    </div>
+						                                        <div class="col-md-3">
+						                        <img src="images/hcs.jpg" height="120" width="20">
+						                        <p>Hybrid Control Systems</p>
+						                    </div>
+						                                        <div class="col-md-3">
+						                        <img src="images/cv.jpg" height="120" width="20">
+						                        <p>Computer Vision</p>
+						                    </div>
+						                                        <div class="col-md-3">
+						                        <img src="images/bsp.jpg" height="120" width="20">
+						                        <p>Biomedical Signal Processing</p>
+						                    </div>
+						                </div>
+									</div>
+								
+							</section>
+
+						<!-- First Section -->
+							<section id="research" class="main special">
+								<header class="major">
+									<h2>Research & Projects</h2>
+								</header>
+								<div class="row">
+									
+								
+								<div class="col-md-12">
+									<div class="col-md-5">
+										<img src="images/daad1.png" height="300" width="200">
+										<iframe width="350" height="250" src="https://www.youtube.com/embed/lmTpIiWQ1gc"></iframe>
+									</div>
+									<div class="col-md-7">
+										<h2><b>Vision based Synthesis and Deployment of Robotic Vehicles using Symbolic Controllers</b>	</h2>
+										<h4>Hybrid Control Systems group, TU Munich, Germany | DAAD WISE Fellowship| May 2016- Aug 2016 | Supervisor: Prof. Dr. Majid Zamani</h4>
+										<p>
+											A group of robots in an urban environment, with predefined target sets and LTL specifications. These specifications include reach-and-stay, recurrently visiting two targets and sequential visit of targets spread across the platform. These bots implement the symbolic controller, based on SCOTS, a software tool built by HCS group in TU Munich for the automatic controller synthesis for nonlinear control systems based on symbolic models. Synthesized a symbolic controller based on SCOTS for such complex LTL specifications.
+											The system uses vision to find the kinematics of the moving robots in real-time and establishes the closed loop control by communicating to the server through UDP. Designed a framework for acquiring real-time kinematics of robot from live feedback given by overhead camera and sending over these co-ordinates to the robot as UDP packets. Implemented the sparse-matrix based Symbolic Controller as C++ program in the robot’s Linux console hence satisfying the complex LTL properties as shown in the video.
+										</p>
+									</div>
+								</div>
+									<div class="col-md-12">
+									<div class="col-md-5">
+										<img src="images/iitk1.png"height="180" >
+										<img src="images/iitk2.png" height="180">
+<img src="images/iitk3.png" height="100">
+										
+									</div>
+									<div class="col-md-7">
+										<h2><b>Vision based Vehicle Trajectory Prediction using an Omnidirectional Camera</b></h2>
+										<h4>Computer Vision Lab, Indian Institute of Technology(IIT), Kanpur | May 2015 - July 2015 | Supervisor: Prof. Dr. K. S. Venkatesh | Presented at ICACCI 2016</h4>
+										<p>
+											A practical method is presented to predict the future spatial-temporal trajectories of multiple vehicles at road  intersections in real time using a catadioptric omnidirectional camera equipped with an Equiangular mirror. Implemented an object tracking algorithm in a traffic scene using the integrated CAMShift-Kalman Filter algorithm for improved occlusion-handling.
+											Domain transformation of the tracked objects location and velocity from image space to real world is done using a geometrical model. Formulated a motion model to predict the trajectory of the vehicles in the scene for the next few seconds.
+
+										</p>
+									</div>
+									</div>
+									<div class="col-md-12">
+									<div class="col-md-5">
+										<img src="images/ecg1.png" height="200" width="100">
+
+<img src="images/ecg2.png" height="180" width="100">
+<img src="images/ecg3.png" height="150" width="100">									
+									</div>
+									<div class="col-md-7">
+										<h2><b>ECG Signal Analysis using Wavelet Transform, S-Transform, Recurrence Quantification and Hjorth Parameter Estimation for Classification of Cardiovascular diseases</b></h2>
+										<h4>Spider R&D, NIT Trichy | Researcher | Presented at ICACCI 2016 | Mar 2016 - Sep 2016</h4>
+										<p>
+											The spontaneous classification of cardiovascular diseases is a challenging task and can be made more feasible with proper ECG fluctuation analysis. We perform a qualitative analysis of the ECG data using complex Gaussian wavelets to investigate the multi-scale, self similar behaviour and deviation via phase plots of the wavelet cross spectrum of the ECG signals. We analyze ECG signals using S transform to overcome the limitations of continuous wavelet transform and make the results more consistent and reliable. Recurrence  quantification analysis (RQA) is a nonlinear analysis tool for investigating the non- stationarity of dynamical systems through the recurrence number and duration in the phase space trajectory of signals. The phase transitions of perturbed ECG signals from normal ECG due to cardiac abnormalities are captured by RQA, while the Hjorth parameters provide the time domain statistical information about the signal. The adequacy of the experimental results validates the efficacy for a integrated Computer Aided Diagnostic (CAD) system for diagnosing different cardiovascular diseases using the above methods.
+
+										</p>
+									</div>
+									</div>
+									<div class="col-md-12">
+									<div class="col-md-5">
+										<img src="images/kvr2.jpg" height="300">
+									
+									</div>
+									<div class="col-md-7">
+										<h2><b>Digit Recognition for Tamil Language using Kaldi ASR</b></h2>
+										<h4>Speech Processing Lab, Indian Institute of Technology (IIT), Madras | Dec 2015 - Jan 2016| Supervisor: Prof. Dr. S. Umesh</h4>
+										<p>
+											And end-to-end application for digit recognition for the language ‘Tamil’ from continuous speech input recorded and decoded in real time. My primary task was to formulate the acoustic and language models for the language ’Tamil’. The speech recognizer was built using Kaldi ASR Toolkit. I developed a system using C++ to build,train and test the recognizer based Hidden Markov Models using Kaldi ASR. The digit recognizer is backed up by a front end real-time decoding user interactive application using PHP and Asterisk.  The system was made robust to all possible varied utterances of each digit. Achieved a WER (Word Error Rate) 23.48 with the optimised vocabulary making a trade-off between robustness of the system and improving accuracy.
+
+										</p>
+									</div>
+									</div>
+</div>
+							</section>
+
+						<!-- Second Section -->
+							<section id="publications" class="main special">
+								<header class="major">
+									<h2>Publications</h2>
+								</header>
+								<p >V.Krishnamoorthy, M.Rungger, M.Zamani, ”Implementation of a Symbolic Controller using SCOTS for Automatic Deployment of Robotic Vehicles”, In preparation for 2017 ACM International Conference on Hybrid Systems: Computation and Control (HSCC 2017) , Pittsburgh, PA, USA, 2017.</p>
+								<p >V.Krishnamoorthy, S.Agarwal, K.S.Venkatesh, ”Vehicle Trajectory Prediction using a Catadioptric Omnidirectional Camera”, 2016 IEEE International Conference on Advances in Computing, Communications and Informatics (ICACCI), Jaipur, India, 2016.</p>
+								<p >S.Agarwal, V.Krishnamoorthy, S.Pratiher, ”ECG Signal Analysis using Wavelet Coherence and S-Transform for Classification of Cardiovascular Diseases”, 2016 IEEE International Conference on Advances in Computing, Communications and Informatics (ICACCI), Jaipur, India, 2016.</p>
+							</section>
+
+						<!-- Get Started -->
+							<section id="workshop" class="main special">
+								<header class="major">
+									<h2>Workshops, Tech talks and Tutoring </h2>
+								</header>
+								<p>My childhood passion for teaching, presenting my projects at the big stage, and organizing technical events became a reality after I joined college in 2013. During my undergraduate study I have tutored and assisted 5 workshops for over 1500+ students and have organized and conducted 3 tech-talks each attended by 300+ students.
+								</p>
+
+
+						<table style="width:100%;text-align: center;">
+						  <tr>
+						    <th>Name of the Event</th>
+						    <th>Organization</th> 
+						    <th>My role</th>
+						    <th>No of Students</th>
+						  </tr>
+						  <tr>
+						    <td>Lecture on Basics of Robotics</td>
+						    <td>NIT Trichy</td> 
+						    <td>Tutor</td>
+						    <td>100</td>
+						  </tr>
+						  <tr>
+						    <td>
+						μ-Con Retromania Workshop 2016 
+						</td>
+						    <td>Spider R&D, NIT Trichy</td> 
+						    <td>Tutor and Head organizer</td>
+						    <td>240</td>
+						  </tr>
+						  <tr>
+						    <td>
+						μ-Con Retromania Workshop 2016 
+						</td>
+						    <td>Spider R&D, NIT Trichy</td> 
+						    <td>Tutor and Head organizer</td>
+						    <td>240</td>
+						  </tr>
+						  <tr>
+						    <td>
+
+						Internet of Things Challenge 2016 
+						 
+						</td>
+						    <td>Pragyan, NIT Trichy</td> 
+						    <td>Head organizer</td>
+						    <td>150</td>
+						  </tr>
+						  <tr>
+						    <td>
+
+						Spider Tech-Talk 2016 on IoT
+						</td>
+						    <td>Spider R&D, NIT Trichy</td> 
+						    <td>Presenter</td>
+						    <td>250</td>
+						  </tr>
+						  <tr>
+						    <td>
+						μ-Con Workshop 2015
+						</td>
+						    <td>Spider R&D, NIT Trichy</td> 
+						    <td>Tutor</td>
+						    <td>270</td>
+						  </tr>
+						   <tr>
+						    <td>
+						Circuitrix Contest 2015
+						</td>
+						    <td>Pragyan, NIT Trichy</td> 
+						    <td>Organizer</td>
+						    <td>200</td>
+						  </tr>
+						  <tr>
+						    <td>
+
+						Spider Tech-Talk 2015 on 3D Perception 
+						</td>
+						    <td>Spider R&D, NIT Trichy</td> 
+						    <td>Presenter</td>
+						    <td>350</td>
+						  </tr>
+						  <tr>
+						    <td>
+
+
+						μ-Con Workshop 2014
+						</td>
+						    <td>Spider R&D, NIT Trichy</td> 
+						    <td>Tutor</td>
+						    <td>245</td>
+						  </tr>
+						  <tr>
+						    <td>
+
+						Spider Tech-Talk 2014 on Li-Fi
+						</td>
+						    <td>Spider R&D, NIT Trichy</td> 
+						    <td>Presenter</td>
+						    <td>400</td>
+						  </tr>
+						</table>
+							
+								<p>
+									Spider is the Research and Development Club of NIT Trichy. It has 4 areas of work namely Electronics, Algorithmic coding, Web Development and App Development.
+
+μ-Con Workshop is the annual freshmen electronics workshop conducted by Spider every year to spread electronics. It features building/reprogramming games with self-created custom game controllers using MSP430. 
+
+Pragyan is an ISO 9001 & 20121 certified annual International Techno-management Organisation of the National Institute of Technology, Tiruchirappalli, India.
+
+
+								</p>
+<div class="col-md-12">
+<img src="images/spi1.png" height="150">
+<img src="images/spi2.png" height="150">
+<img src="images/spi3.png" height="150">
+</div>
+							</section>
+
+
+							<section id="accomplishments" class="main">
+								<div class="">
+									<div class="content">
+										<header class="major" style="padding-top: 40px;">
+											<h2>Notable Accomplishments</h2>
+										</header>
+										<ul>
+											<li>Invited to be an Academic Assistant at TU Munich (Nov 2016 - Jan 2017)
+            Hybrid Control Systems (HCS), TU Munich
+</li>
+<li>DAAD WISE Scholarship Holder</li>
+<li>President and Head of Electronics 
+            Spider R&D, NIT Trichy</li>
+            <li>Head of Event Managing for IoT Challenge and Circuitrix Pragyan, Technical Festival of NIT Trichy (ISO 9001 & 20121 certified)
+
+</li>
+<li>Marketing Manager and Head of Company Stalls 
+            Festember, International Cultural Festival of NIT Trichy</li>
+										</ul>
+									</div>
+								</div>
+									
+								
+							</section>
+
+
+<section id="cv" class="main special" style="padding-top: 10px;padding-bottom: 120px;">
+								<header class="major">
+									<h2>CV</h2>
+								</header>
+								<div class="col-md-12">
+									<h3>Here's my <a href="https://drive.google.com/open?id=0BzOtubkxc_YyY2cyMkdSZ2NCZXc">CV</a></h3>
+								</div>
+								
+							</section>
+					</div>
+
+
+
+
+
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<p>If you have a project you can email me anytime!</p>
+						</section>
+						<section>
+							<dl class="alt">
+								<dt>Email</dt>
+								<dd><a href="#">ram7sachin@gmail.com</a></dd>
+							</dl>
+							<ul class="icons">
+								<li><a href="#" class="icon fa-twitter alt"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon fa-facebook alt"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon fa-instagram alt"><span class="label">Instagram</span></a></li>
+								<li><a href="#" class="icon fa-github alt"><span class="label">GitHub</span></a></li>
+								<li><a href="#" class="icon fa-dribbble alt"><span class="label">Dribbble</span></a></li>
+							</ul>
+						</section>
+						
+					</footer>
+
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
